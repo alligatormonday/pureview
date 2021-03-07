@@ -15,18 +15,18 @@ export default function Home() {
                 </p>
 
                 <h1 className={styles.title}>
-                    p u r e v i e w
+                    P u r e V i e w
                 </h1>
 
                 <p className={styles.description}>
-                    touch to get started
+                    touch to start
                 </p>
 
             </main>
 
             <footer className={styles.footer}>
                 <p>
-                pureview &copy; 2021
+                PureView &copy; 2021
                 </p>
             </footer>
         </div>
