@@ -1,20 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import * as React from "react"
-
-// 1. import `ChakraProvider` component
-import { ChakraProvider } from "@chakra-ui/react"
-function App() {
-  // 2. Use at the root of your app
-  return (
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
-  )
-}
+import Link from 'next/link'
 
 export default function Home() {
     return (
+        <Link href="/instruments">
         <div className={styles.container}>
             <Head>
                 <title>PureView 🧪</title>
@@ -26,9 +16,12 @@ export default function Home() {
                     P u r e V i e w
                 </h1>
 
-                <p className={styles.description}>
+                
+                <a  className={styles.description}>
                     touch to start
-                </p>
+                </a>
+               
+                
 
             </main>
 
@@ -38,5 +31,6 @@ export default function Home() {
                 </p>
             </footer>
         </div>
+        </Link>
     )
 }

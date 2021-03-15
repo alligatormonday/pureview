@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Instruments() {
     return (
         <div className={styles.container}>
             <Head>
@@ -19,12 +19,6 @@ export default function Home() {
                 </p>
 
             </main>
-
-            <footer className={styles.footer}>
-                <p>
-                PureView &copy; 2021
-                </p>
-            </footer>
         </div>
     )
 }
