@@ -1,5 +1,17 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import * as React from "react"
+
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from "@chakra-ui/react"
+function App() {
+  // 2. Use at the root of your app
+  return (
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+  )
+}
 
 export default function Home() {
     return (
@@ -10,10 +22,6 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <p className={styles.description}>
-                    welcome to 
-                </p>
-
                 <h1 className={styles.title}>
                     P u r e V i e w
                 </h1>
