@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Selection.module.css'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import { Heading } from "@chakra-ui/react"
 
 

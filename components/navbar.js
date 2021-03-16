@@ -1,43 +1,63 @@
 import React from "react";
-import { Flex, Menu } from "@chakra-ui/react";
-import DarkModeSwitch from '../components/DarkModeSwitch'
-
+import { Flex, Box, useColorMode } from "@chakra-ui/react";
+import DarkModeSwitch from './DarkModeSwitch'
+import styled from '@emotion/styled'
 import Logo from "./Logo";
 
-const NavBar = (props) => {
-    return (
-        <NavBarContainer {...props}>
-            <Logo
-                w="600px"
-            />
-        </NavBarContainer>
-    );
-};
 
 const NavBarContainer = ({ children, ...props }) => {
+    const { colorMode } = useColorMode()
+
+    const bgColor = {
+        light: 'white',
+        dark: '#444444'
+    }
+
+    const color = {
+        light: '#0057FF',
+        dark: 'white'
+    }
+
+    const StickyNav = styled(Flex)`
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    backdrop-filter: saturate(180%) blur(20px);
+    transition: height .5s, line-height .5s;
+    `
+
     return (
-        <Menu>
-            <Flex
+
+        <StickyNav
+            flexDirection="row"
+            justifyContent="space-between"
+            alignItems="center"
+            maxWidth="100%"
+            minWidth="356px"
+            width="100%"
+            bg={bgColor[colorMode]}
+            as="nav"
+            px={[2, 6, 6]}
+            py={2}
+            mt={8}
+            mb={[0, 0, 8]}
+            mx="auto"
+        >
+            <Logo
                 letterSpacing={20}
                 as="nav"
-                align="center"
-                justify="space-between"
                 wrap="wrap"
                 w="100%"
                 mb={8}
                 p={8}
-                bg={["primary.500", "primary.500", "transparent", "transparent"]}
-                color={["black", "black", "primary.700", "primary.700"]}
+                bg={bgColor[colorMode]}
+                color={color[colorMode]}
                 {...props}
-            >
-                
-                {children}
-
-                <DarkModeSwitch />
-            </Flex>
-        </Menu>
+            />
+            <DarkModeSwitch />
+        </StickyNav>
 
     );
 };
 
-export default NavBar;
+export default NavBarContainer;
