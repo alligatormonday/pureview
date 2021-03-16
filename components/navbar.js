@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Menu } from "@chakra-ui/react";
+import DarkModeSwitch from '../components/DarkModeSwitch'
 
 import Logo from "./Logo";
 
@@ -29,7 +30,10 @@ const NavBarContainer = ({ children, ...props }) => {
                 color={["black", "black", "primary.700", "primary.700"]}
                 {...props}
             >
+                
                 {children}
+
+                <DarkModeSwitch />
             </Flex>
         </Menu>
 

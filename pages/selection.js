@@ -3,6 +3,7 @@ import styles from '../styles/Selection.module.css'
 import Navbar from '../components/navbar'
 import { Heading } from "@chakra-ui/react"
 
+
 export default function Selection() {
     return (
 

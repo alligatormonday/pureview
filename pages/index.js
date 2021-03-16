@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import { Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react"
+
+
 
 export default function Home() {
     return (
@@ -26,8 +28,6 @@ export default function Home() {
                     <p className={styles.description}>
                         touch to start
                 </p>
-
-
 
                 </main>
 
