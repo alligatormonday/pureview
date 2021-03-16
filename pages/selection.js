@@ -15,7 +15,7 @@ export default function Selection() {
             </Head>
 
             <main className={styles.main}>
-                <Heading as="h1" size="3xl">
+                <Heading as="h1" size="2xl" color="gray.500">
                     Select an instrument category...
                 </Heading>
             </main>

@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import { Flex } from "@chakra-ui/react"
+import { Flex, Heading, Text } from "@chakra-ui/react"
+import { graphqlSync } from 'graphql'
 
 
 
-export default function Home() {
+export default function Index() {
     return (
         <Link href="/selection">
             <div className={styles.container}>
@@ -18,23 +19,28 @@ export default function Home() {
                     <Flex
                         letterSpacing={45}
                     >
-                        <h1 className={styles.title}>
+                        <Heading 
+                        className={styles.title}
+                        as="h1"
+                        size="6xl"
+                        fontWeight="bold"
+                        >
                             PureView
-                        </h1>
+                        </Heading>
                     </Flex>
 
 
 
-                    <p className={styles.description}>
+                    <Text color="gray.500" className={styles.description}>
                         touch to start
-                </p>
+                </Text>
 
                 </main>
 
                 <footer className={styles.footer}>
-                    <p>
+                    <Text color="gray.500" >
                         PureView &copy; 2021
-                </p>
+                </Text>
                 </footer>
             </div>
         </Link>
